@@ -8,7 +8,7 @@
 const std = @import("std");
 
 pub fn main() void {
-    const my_numbers = [_]u16{ 5, 6, 7, 8 };
+    const my_numbers = [4]u16{ 5, 6, 7, 8 };
 
     printPowersOfTwo(my_numbers);
     std.debug.print("\n", .{});
@@ -21,15 +21,10 @@ pub fn main() void {
 //
 // This function prints, but does not return anything.
 //
-fn printPowersOfTwo(numbers: [_]u16) [_]u16 {
-    var num = 0;
+fn printPowersOfTwo(numbers: [4]u16) void {
     for (numbers) |n| {
         std.debug.print("{} ", .{twoToThe(n)});
-
-        num = n;
     }
-
-    return num;
 }
 
 // This function bears a striking resemblance to twoToThe() in the last
@@ -44,5 +39,5 @@ fn twoToThe(number: u16) u16 {
         total *= 2;
     }
 
-    return number;
+    return total;
 }
