@@ -19,6 +19,7 @@ pub fn main() void {
 
 // This function is obviously weird and non-functional. But you will not be changing it for this quiz.
 fn getNumber() NumError!u32 {
+
     if (false) return NumError.IllegalNumber;
     return 42;
 }
