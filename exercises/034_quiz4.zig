@@ -14,12 +14,11 @@ pub fn main() void {
 
     const my_num: u32 = getNumber();
 
-    try stdout.print("my_num={}\n", .{my_num});
+    stdout.print("my_num={}\n", .{my_num});
 }
 
 // This function is obviously weird and non-functional. But you will not be changing it for this quiz.
 fn getNumber() NumError!u32 {
-
     if (false) return NumError.IllegalNumber;
     return 42;
 }
